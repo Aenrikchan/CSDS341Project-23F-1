@@ -1,10 +1,9 @@
 FROM openjdk
 
-COPY java .
+COPY . .
 
-WORKDIR /java/com/client
+# Main.java imports ./cli/Cli.java as 'import cli.Cli;'
 
-RUN ["javac", "Main.java"]
+RUN javac -d . Main.java
 
-
-ENTRYPOINT ["java", "main"]
+CMD ["java", "Main"]

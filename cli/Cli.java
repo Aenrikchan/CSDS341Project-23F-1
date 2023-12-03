@@ -1,4 +1,4 @@
-package com.client.cli;
+package cli;
 
 public class Cli {
   public static void test() {
